@@ -9,13 +9,14 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
 
     @NotNull
     @Size(min = 1, max = 50, message = "Introdicir entre 1 y 50 caracteres")
@@ -31,10 +32,22 @@ public class Persona {
 
     @NotNull
     @Size(min = 1, max = 500, message = "Introdicir entre 1 y 500 caracteres")
+
+    @NotNull
     private String descripcion;
 
-    @Size(min = 1, max = 100, message = "Introdicir entre 1 y 50 caracteres")
+    @NotNull
     private String imgPerfil;
 
-    
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.imgPerfil = imgPerfil;
+    }
+
 }

@@ -10,12 +10,16 @@ public class DtoSkills {
     @NotBlank
     private int progreso;
 
+    @NotBlank
+    private String imgSkill;
+    
     public DtoSkills() {
     }
 
-    public DtoSkills(String nombreSkill, int progreso) {
+    public DtoSkills(String nombreSkill, int progreso, String imgSkill) {
         this.nombreSkill = nombreSkill;
         this.progreso = progreso;
+        this.imgSkill = imgSkill;
     }
 
     public String getNombreSkill() {
@@ -33,7 +37,14 @@ public class DtoSkills {
     public void setProgreso(int progreso) {
         this.progreso = progreso;
     }
-    
-    
+
+    public String getImgSkill() {
+        return imgSkill;
+    }
+
+    public void setImgSkill(String imgSkill) {
+        this.imgSkill = imgSkill;
+    }
+
     
 }

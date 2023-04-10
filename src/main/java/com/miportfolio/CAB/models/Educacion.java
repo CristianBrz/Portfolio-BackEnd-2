@@ -31,7 +31,6 @@ public class Educacion {
     private String descripcionEdu;
 
 
-    @Size(min = 1, max = 50, message = "Introdicir entre 1 y 50 caracteres")
     private String imgEdu;
 
     public Educacion() {

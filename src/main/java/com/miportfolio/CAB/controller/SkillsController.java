@@ -45,7 +45,8 @@ public class SkillsController {
 
         Skills skills = new Skills(
                 dtoSkills.getNombreSkill(),
-                dtoSkills.getProgreso()
+                dtoSkills.getProgreso(),
+                dtoSkills.getImgSkill()
         );
 
         skillsService.save(skills);
@@ -71,6 +72,7 @@ public class SkillsController {
         Skills skills = skillsService.getOne(id).get();
         skills.setNombreSkill(dtoSkills.getNombreSkill());
         skills.setProgreso(dtoSkills.getProgreso());
+        skills.setImgSkill(dtoSkills.getImgSkill());
 
         skillsService.save(skills);
         return new ResponseEntity(new Mensaje("Skill actualizada"), HttpStatus.OK);

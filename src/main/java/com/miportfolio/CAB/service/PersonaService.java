@@ -3,35 +3,44 @@ package com.miportfolio.CAB.service;
 import com.miportfolio.CAB.models.Persona;
 import com.miportfolio.CAB.repository.IPersonaRepository;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonaService implements IPersonaService {
+@Transactional
+public class PersonaService {
 
     @Autowired
-    IPersonaRepository persoRepo;
+    IPersonaRepository iPersoRepo;
 
-    @Override
-    public List<Persona> getPersona() {
-        List<Persona> ListaPersonas = persoRepo.findAll();
-        return ListaPersonas;
+    public List<Persona> list() {
+        return iPersoRepo.findAll();
     }
 
-    @Override
-    public void savePersona(Persona persona) {
-        persoRepo.save(persona);
+    public Optional<Persona> getOne(int id) {
+        return iPersoRepo.findById(id);
     }
 
-    @Override
-    public void deletePersona(Long id) {
-        persoRepo.deleteById(id);
+    public Optional<Persona> getByNombre(String nombre) {
+        return iPersoRepo.findByNombre(nombre);
     }
 
-    @Override
-    public Persona findPersona(Long id) {
-        Persona perso = persoRepo.findById(id).orElse(null);
-        return perso;
+    public void save(Persona persona) {
+        iPersoRepo.save(persona);
+    }
+
+    public void delete(int id) {
+        iPersoRepo.deleteById(id);
+    }
+
+    public boolean existsById(int id) {
+        return iPersoRepo.existsById(id);
+    }
+
+    public boolean existsByNombre(String nombre) {
+        return iPersoRepo.existsByNombre(nombre);
     }
 
 }

@@ -14,13 +14,15 @@ public class Skills {
 
     private String nombreSkill;
     private int progreso;
+    private String imgSkill;
 
     public Skills() {
     }
 
-    public Skills(String nombreSkill, int progreso) {
+    public Skills(String nombreSkill, int progreso, String imgSkill) {
         this.nombreSkill = nombreSkill;
         this.progreso = progreso;
+        this.imgSkill = imgSkill;
     }
 
     public int getId() {
@@ -46,6 +48,15 @@ public class Skills {
     public void setProgreso(int progreso) {
         this.progreso = progreso;
     }
-    
+
+    public String getImgSkill() {
+        return imgSkill;
+    }
+
+    public void setImgSkill(String imgSkill) {
+        this.imgSkill = imgSkill;
+    }
+
+       
     
 }
