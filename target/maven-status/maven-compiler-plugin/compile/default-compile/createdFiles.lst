@@ -12,6 +12,8 @@ com\miportfolio\CAB\security\entity\UsuarioPrincipal.class
 com\miportfolio\CAB\repository\IExpLabRepository.class
 com\miportfolio\CAB\security\repository\IRolRepository.class
 com\miportfolio\CAB\service\ExpLabService.class
+com\miportfolio\CAB\repository\IProyectosRepository.class
+com\miportfolio\CAB\dto\DtoProyectos.class
 com\miportfolio\CAB\controller\SkillsController.class
 com\miportfolio\CAB\dto\DtoEducacion.class
 com\miportfolio\CAB\security\Jwt\JwtTokenFilter.class
@@ -21,8 +23,10 @@ com\miportfolio\CAB\controller\ExpLaboralController.class
 com\miportfolio\CAB\security\controller\AuthController.class
 com\miportfolio\CAB\dto\DtoSkills.class
 com\miportfolio\CAB\service\EducacionService.class
+com\miportfolio\CAB\controller\ProyectosController.class
 com\miportfolio\CAB\security\entity\Usuario.class
 com\miportfolio\CAB\models\Persona.class
+com\miportfolio\CAB\models\Proyectos.class
 com\miportfolio\CAB\repository\IPersonaRepository.class
 com\miportfolio\CAB\models\Skills.class
 com\miportfolio\CAB\dto\DtoPersona.class
@@ -36,4 +40,5 @@ com\miportfolio\CAB\security\Jwt\JwtProvider.class
 com\miportfolio\CAB\models\Educacion.class
 com\miportfolio\CAB\security\service\UsuarioService.class
 com\miportfolio\CAB\service\PersonaService.class
+com\miportfolio\CAB\service\ProyectosService.class
 com\miportfolio\CAB\dto\DtoExpLaboral.class
